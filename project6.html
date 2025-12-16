@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resense - Chris Park</title>
+    <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body class="project-page">
+    <header>
+        <div class="header-container">
+            <a href="projects.html" class="brand">Chris Park</a>
+            <nav>
+                <a href="index.html" class="nav-link">Product Design</a>
+                <a href="case-study.html" class="nav-link">Case Study</a>
+                <a href="timeline.html" class="nav-link">Timeline</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero project-snap-section">
+        <div class="project-hero-background">
+            <img src="resenseFront.jpg" alt="Resense Background" class="project-hero-image">
+        </div>
+        <div class="project-hero-overlay"></div>
+        <div class="project-hero-content">
+            <h1 class="project-hero-title">Defining sensation for the painless</h1>
+        </div>
+    </section>
+
+    <section class="project-content-section project-snap-section">
+        <div class="project-content-wrapper">
+            <div class="project-description">
+                <h2 class="project-content-title">Resense</h2>
+                <p class="project-content-text">At Stanford Immerse the Bay 2025 my team and I built an Augmented Reality system designed to help people with congenital insensitivity to pain perceive environmental dangers through real-time haptic feedback. This innovative solution addresses a critical need for individuals who cannot feel pain, providing them with essential sensory information to navigate the world safely and confidently.</p>
+            </div>
+            <div class="project-services">
+                <h3 class="services-title">Skills</h3>
+                <ul class="services-list">
+                    <li>Unity</li>
+                    <li>Oculus Quest 3s</li>
+                    <li>C#</li>
+                    <li>Interaction Design</li>
+                    <li>Arduino</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resense imagery: full-width photo, then video + second photo below -->
+    <section class="project-image-section project-snap-section">
+        <div class="project-image-container">
+            <img src="Resense/resense1.jpeg" alt="Resense 1" class="project-full-image">
+        </div>
+    </section>
+
+    <section class="project-content-section project-snap-section">
+        <div class="project-content-wrapper project-content-single">
+            <div class="project-description">
+                <h2 class="project-content-title">Problem Space</h2>
+                <p class="project-content-text">Congenital Insensitivity to Pain (CIP) is a rare genetic condition where pain signals never reach the brain, even though touch senses are normal. Without pain feedback, CIP patients lack the internal danger threshold that prevents burns, cuts, broken bones, joint pain and long-duration tissue damage.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-image-section project-snap-section">
+        <div class="project-image-container">
+            <video autoplay muted loop playsinline class="project-full-image">
+                <source src="Resense/resense3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="project-content-section project-snap-section">
+        <div class="project-content-wrapper project-content-single">
+            <div class="project-description">
+                <h2 class="project-content-title">Solution</h2>
+                <p class="project-content-text">We built a training and guidance tool that combines the Meta Quest headset, Arduino, ESP 32, servo motor, 5 flex sensors for each finger,and a thermoster. We combined all of this hardware to make a haptic glove to give CIP patients a new feedback channel that signals the risk before damage occurs and guides through daily tasks. This glove creates customizable haptic feedback patterns, (ticks, pulses, different rhtyms) letting the system translate heat, pressure, or unsafe duration into a new sensory language the user can understand.</p>
+                <p class="project-content-text">Visually, the haptic gloves grip strength data and temperature data is displayed on the Quest. For temperature the Quest directly edits the passthrough changing to red or blue. For grip strength the values are displayed on the Quest UI.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="project-image-section project-snap-section">
+        <div class="project-image-container">
+            <img src="Resense/resense2.jpeg" alt="Resense 2" class="project-full-image">
+        </div>
+    </section>
+
+    <script src="script.js?v=6"></script>
+</body>
+</html>
+
