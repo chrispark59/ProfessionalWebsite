@@ -578,11 +578,12 @@ main {
 }
 
 .about-page-image {
+    width: 50vw;
     max-width: 50vw;
     max-height: 100vh;
-    width: auto;
     height: auto;
     object-fit: contain;
+    object-position: right center;
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 7.5%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 7.5%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
 }
@@ -608,6 +609,13 @@ main {
     margin-bottom: 20px;
 }
 
+/* Tablet and below - hide about image */
+@media (max-width: 1366px) {
+    .about-image {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .page-content {
         padding: 0 40px;
@@ -625,12 +633,12 @@ main {
 @media (max-width: 768px) {
     .page-content {
         margin-top: 140px;
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .about-content-wrapper {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
 
     .about-text {
@@ -638,19 +646,21 @@ main {
     }
 
     .about-image {
-        justify-content: center;
+        display: none;
     }
 
     .page-content h1 {
         font-size: 36px;
+        margin-bottom: 20px;
     }
 
     .page-content .content {
-        padding: 40px 30px;
+        padding: 20px 0;
     }
 
     .page-content p {
         font-size: 16px;
+        margin-bottom: 12px;
     }
 }
 
@@ -661,15 +671,20 @@ main {
     }
 
     .about-content-wrapper {
-        gap: 30px;
+        gap: 15px;
     }
 
     .page-content h1 {
         font-size: 28px;
+        margin-bottom: 15px;
     }
 
     .page-content .content {
-        padding: 30px 20px;
+        padding: 15px 0;
+    }
+
+    .page-content p {
+        margin-bottom: 10px;
     }
 }
 
@@ -715,8 +730,8 @@ main {
     }
 
     .header-container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 20px;
         max-width: 100%;
         padding: 0 20px;
@@ -737,12 +752,9 @@ main {
         cursor: pointer;
     }
 
-    /* Mobile: no background video or gradient, just clean white hero */
+    /* Mobile: hide hero section completely */
     .hero-section.full-page {
-        padding: 120px 0 40px;
-        min-height: 85vh;
-        align-items: flex-start;
-        background: #ffffff;
+        display: none;
     }
 
     .hero-video,
@@ -778,7 +790,7 @@ main {
 
     .work-section {
         max-width: 100%;
-        padding: 60px 0 0;
+        padding: 100px 0 0;
     }
 
     .work-section .project-grid {
@@ -828,9 +840,7 @@ main {
     }
 
     .hero-section.full-page {
-        padding: 110px 0 30px;
-        min-height: 80vh;
-        background: #ffffff;
+        display: none;
     }
 
     .hero-video,
@@ -870,6 +880,7 @@ main {
 
     .work-section {
         max-width: 100%;
+        padding: 100px 0 0;
     }
 
     .work-section .project-grid {
@@ -877,8 +888,7 @@ main {
     }
 
     .hero-section.full-page {
-        padding: 110px 0 60px;
-        min-height: 100vh;
+        display: none;
     }
 
     .hero-content {
@@ -886,15 +896,11 @@ main {
     }
 
     .work-section {
-        padding: 60px 0 0;
+        padding: 100px 0 0;
     }
 
     .work-section .project-grid {
         padding: 0 20px;
-    }
-
-    .hero-word {
-        font-size: 68px;
     }
 
     .hero-description {
@@ -1769,5 +1775,12 @@ body.project-page {
 
     .timeline-dot.active .year-label {
         font-size: 24px;
+    }
+}
+
+/* Hide timeline on mobile */
+@media (max-width: 768px) {
+    .timeline-container {
+        display: none;
     }
 }
