@@ -1432,55 +1432,141 @@ body.project-page {
     }
 }
 
+/* ===== MOBILE ADJUSTMENTS FOR PROJECT PAGES ===== */
 @media (max-width: 768px) {
+    /* Tighter padding-top on body to reduce space at top */
+    body.project-page {
+        padding-top: 70px; /* reduced from 100px */
+    }
+    
+    /* Reduce padding in all snap sections */
     .project-snap-section {
-        min-height: 100vh;
+        min-height: auto;
+        padding: 15px 20px; /* reduced from 20px 30px */
     }
 
+    /* Hero section - reduce padding */
     .project-hero {
-        min-height: 100vh;
+        min-height: 60vh; /* reduced from 100vh */
     }
-
-    .project-video-section {
-        min-height: 100vh;
+    
+    .project-hero-content {
+        padding: 20px; /* reduced from 30px 20px */
     }
 
     .project-hero-title {
-        font-size: 42px;
+        font-size: 36px; /* reduced from 42px */
+        margin-bottom: 0;
     }
 
-    .project-hero-content {
-        padding: 30px 20px;
-    }
-
+    /* Content section - much tighter spacing */
     .project-content-section {
-        padding: 60px 20px;
+        padding: 30px 20px; /* reduced from 60px 20px */
+        min-height: auto;
+    }
+    
+    .project-content-wrapper {
+        gap: 30px; /* reduced from default */
     }
 
     .project-content-title {
-        font-size: 32px;
+        font-size: 28px; /* reduced from 32px */
+        margin-bottom: 15px; /* reduced from 30px */
     }
 
     .project-content-text {
         font-size: 16px;
+        line-height: 1.6; /* tighter line height */
+        margin-bottom: 12px; /* reduced from 20px */
+    }
+
+    .services-title {
+        margin-bottom: 12px; /* reduced from 20px */
     }
 
     .services-list li {
         font-size: 16px;
+        margin-bottom: 6px; /* reduced from 10px */
     }
 
+    /* Image sections - reduced padding */
+    .project-image-section {
+        padding: 20px 15px; /* reduced from 40px 30px */
+    }
+    
+    .project-image-container:not(.project-images-side-by-side) {
+        gap: 20px; /* reduced from 50px */
+    }
+
+    /* Side by side images */
     .project-images-side-by-side {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px; /* reduced from 20px */
+    }
+    
+    .project-image-label {
+        margin-bottom: 10px; /* reduced from 20px */
     }
 
-    .project-images-side-by-side .project-full-image {
-        width: 100%;
-    }
-
+    /* Sketches grid */
     .project-sketches-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px; /* reduced from 20px */
+    }
+    
+    .project-image-section:has(.project-sketches-grid) {
+        padding: 20px 15px; /* reduced from 40px 30px */
+    }
+    
+    /* Video section */
+    .project-video-section {
+        min-height: 50vh; /* reduced from 100vh */
+    }
+}
+
+/* Even tighter for very small phones */
+@media (max-width: 480px) {
+    body.project-page {
+        padding-top: 60px;
+    }
+    
+    .project-snap-section {
+        padding: 10px 15px;
+    }
+    
+    .project-hero-content {
+        padding: 15px;
+    }
+    
+    .project-hero-title {
+        font-size: 32px;
+    }
+    
+    .project-content-section {
+        padding: 20px 15px;
+    }
+    
+    .project-content-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .project-content-text {
+        font-size: 15px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    
+    .project-image-section {
+        padding: 15px 10px;
+    }
+    
+    .project-image-container:not(.project-images-side-by-side) {
+        gap: 15px;
+    }
+    
+    .project-images-side-by-side {
+        gap: 12px;
     }
 }
 
