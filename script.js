@@ -138,18 +138,20 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.remove('active');
     });
     
-    // Only add active class if we're NOT on projects.html
-    // projects.html should have no active links
-    if (currentPage !== 'projects.html') {
+    const designSystemsPage = 'design-systems.html';
+    const homePages = new Set(['index.html', 'projects.html']);
+
+    // Home pages (index/projects) should have no active links
+    if (!homePages.has(currentPage)) {
         // Define case study projects
         const caseStudyProjects = ['project6.html', 'project11.html', 'project12.html'];
         
         // Add active class to the correct link based on current page
         navLinks.forEach(link => {
             const linkHref = link.getAttribute('href');
-            // Handle index.html showing Design Systems as active
-            if (currentPage === 'index.html') {
-                if (linkHref === 'index.html') {
+            // Handle Design Systems page
+            if (currentPage === designSystemsPage) {
+                if (linkHref === designSystemsPage) {
                     link.classList.add('active');
                 }
             }
@@ -158,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             }
             // Handle project detail pages (project1.html, project2.html, etc.)
-            else if (currentPage.startsWith('project') && currentPage.endsWith('.html') && currentPage !== 'projects.html') {
+            else if (currentPage.startsWith('project') && currentPage.endsWith('.html')) {
                 // Check if it's a case study project
                 if (caseStudyProjects.includes(currentPage)) {
                     // Highlight Spatial Computing for spatial computing projects
@@ -167,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 } else {
                     // Highlight Design Systems for other project pages
-                    if (linkHref === 'index.html') {
+                    if (linkHref === designSystemsPage) {
                         link.classList.add('active');
                     }
                 }
