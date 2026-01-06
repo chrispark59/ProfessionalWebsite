@@ -142,12 +142,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // projects.html should have no active links
     if (currentPage !== 'projects.html') {
         // Define case study projects
-        const caseStudyProjects = ['project1.html', 'project2.html', 'project6.html', 'project7.html', 'project11.html'];
+        const caseStudyProjects = ['project6.html', 'project11.html', 'project12.html'];
         
         // Add active class to the correct link based on current page
         navLinks.forEach(link => {
             const linkHref = link.getAttribute('href');
-            // Handle index.html showing Product Design as active
+            // Handle index.html showing Design Systems as active
             if (currentPage === 'index.html') {
                 if (linkHref === 'index.html') {
                     link.classList.add('active');
@@ -161,12 +161,12 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (currentPage.startsWith('project') && currentPage.endsWith('.html') && currentPage !== 'projects.html') {
                 // Check if it's a case study project
                 if (caseStudyProjects.includes(currentPage)) {
-                    // Highlight Case Study for case study projects
+                    // Highlight Spatial Computing for spatial computing projects
                     if (linkHref === 'case-study.html') {
                         link.classList.add('active');
                     }
                 } else {
-                    // Highlight Product Design for other project pages
+                    // Highlight Design Systems for other project pages
                     if (linkHref === 'index.html') {
                         link.classList.add('active');
                     }

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { type: 'single', date: new Date('2025-11-25') }, // Physical Therapy Apple Vision Pro Project
         { type: 'single', date: new Date('2025-11-16') }, // Stanford Immerse the Bay Hackathon
         { type: 'single', date: new Date('2025-10-24') }, // Cal Hacks Hackathon
-        { type: 'range', start: new Date('2025-06-01'), end: new Date('2025-08-15') }, // GCOO Product Design Internship
+        { type: 'range', start: new Date('2025-06-01'), end: new Date('2025-08-15') }, // GCOO Design Systems Internship
         { type: 'single', date: new Date('2025-05-23') }, // Agent Hacks Hackathon
         { type: 'range', start: new Date('2025-01-30'), end: new Date('2025-04-15') },  // USC SEP Startup Incubator
         { type: 'single', date: new Date('2024-11-18') }  // Stanford Immerse the Bay Hackathon
