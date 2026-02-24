@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Home pages (index/projects) should have no active links
     if (!homePages.has(currentPage)) {
         // Define case study projects
-        const caseStudyProjects = ['project6.html', 'project11.html', 'project12.html'];
+        const caseStudyProjects = ['project6.html', 'project11.html', 'project12.html', 'project13.html'];
         
         // Add active class to the correct link based on current page
         navLinks.forEach(link => {
