@@ -1,1 +1,12 @@
+# macOS
+.DS_Store
 
+# local dev server artifacts
+.local-server.log
+.local-server.pid
+
+# editor
+.vscode/
+
+# uncompressed video/image masters kept locally, never committed
+_originals/
