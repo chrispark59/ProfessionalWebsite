@@ -10,3 +10,6 @@
 
 # uncompressed video/image masters kept locally, never committed
 _originals/
+
+# scratch: video compression compare (not committed)
+_compare/
