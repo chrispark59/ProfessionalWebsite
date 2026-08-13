@@ -1,17 +1,27 @@
 // Chris Park — portfolio interactions
 document.addEventListener('DOMContentLoaded', function () {
     // --- Project card navigation (projects grid pages) ---
-    // Hover overlay styling/animation is handled entirely in CSS
-    // (.card-overlay + .project-card:hover .card-overlay).
+    // Maps each card's data-project id to its page. Crosswind variants
+    // (5, 9, 10) share one page. Hover overlay is handled entirely in CSS.
+    const projectPages = {
+        '1':  'project_unitFitness.html',
+        '2':  'project_gcoo.html',
+        '3':  'project_tesla.html',
+        '4':  'project_redBull.html',
+        '5':  'project_crosswind.html',
+        '6':  'project_resense.html',
+        '7':  'project_lotus.html',
+        '9':  'project_crosswind.html',
+        '10': 'project_crosswind.html',
+        '11': 'project_volumeZero.html',
+        '12': 'project_APT.html',
+        '13': 'project_gradient.html',
+        '14': 'project_miraGlasses.html'
+    };
     document.querySelectorAll('.project-card').forEach(function (card) {
         card.addEventListener('click', function () {
-            const projectNumber = this.getAttribute('data-project');
-            // Crosswind projects (5, 9, 10) all share one page
-            if (projectNumber === '5' || projectNumber === '9' || projectNumber === '10') {
-                window.location.href = 'project-crosswind.html';
-            } else {
-                window.location.href = `project${projectNumber}.html`;
-            }
+            const target = projectPages[this.getAttribute('data-project')];
+            if (target) window.location.href = target;
         });
     });
 
@@ -25,7 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Home pages (index/projects) intentionally have no active link.
     if (!homePages.has(currentPage)) {
-        const caseStudyProjects = ['project6.html', 'project11.html', 'project12.html', 'project13.html'];
+        // Spatial Computing projects highlight "Spatial Computing"; the rest, "Design Systems".
+        const caseStudyProjects = [
+            'project_resense.html',
+            'project_volumeZero.html',
+            'project_APT.html',
+            'project_gradient.html'
+        ];
         navLinks.forEach(link => {
             const linkHref = link.getAttribute('href');
             if (currentPage === designSystemsPage) {
@@ -33,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (currentPage === linkHref) {
                 link.classList.add('active');
             } else if (currentPage.startsWith('project') && currentPage.endsWith('.html')) {
-                // Case-study projects highlight Spatial Computing; the rest, Design Systems.
                 if (caseStudyProjects.includes(currentPage)) {
                     if (linkHref === 'case-study.html') link.classList.add('active');
                 } else if (linkHref === designSystemsPage) {
