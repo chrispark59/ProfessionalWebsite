@@ -60,10 +60,18 @@ header {
     letter-spacing: -0.5px;
     text-decoration: none;
     transition: opacity 0.3s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 .brand:hover {
     opacity: 0.8;
+}
+
+.brand-logo {
+    height: 44px;
+    width: auto;
+    display: block;
 }
 
 nav {
