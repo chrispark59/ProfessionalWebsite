@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
             'project_resense.html',
             'project_volumeZero.html',
             'project_APT.html',
-            'project_gradient.html'
+            'project_gradient.html',
+            'project_honda.html',
+            'project_alaskaAirlines.html'
         ];
         navLinks.forEach(link => {
             const linkHref = link.getAttribute('href');
