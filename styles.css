@@ -394,6 +394,18 @@ main {
     background: #ffffff;
 }
 
+/* Logo cards (Honda, Alaska Airlines) — show whole logo, no crop */
+.project-card[data-project="15"],
+.project-card[data-project="16"] {
+    background: #ffffff;
+}
+
+.project-card[data-project="15"] .card-image,
+.project-card[data-project="16"] .card-image {
+    object-fit: contain;
+    background: #ffffff;
+}
+
 
 
 .project-card:hover .card-image {

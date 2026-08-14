@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         '11': 'project_volumeZero.html',
         '12': 'project_APT.html',
         '13': 'project_gradient.html',
-        '14': 'project_miraGlasses.html'
+        '14': 'project_miraGlasses.html',
+        '15': 'project_honda.html',
+        '16': 'project_alaskaAirlines.html'
     };
     document.querySelectorAll('.project-card').forEach(function (card) {
         card.addEventListener('click', function () {
