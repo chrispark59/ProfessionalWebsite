@@ -60,18 +60,10 @@ header {
     letter-spacing: -0.5px;
     text-decoration: none;
     transition: opacity 0.3s ease;
-    display: inline-flex;
-    align-items: center;
 }
 
 .brand:hover {
     opacity: 0.8;
-}
-
-.brand-logo {
-    height: 44px;
-    width: auto;
-    display: block;
 }
 
 nav {
@@ -390,6 +382,16 @@ main {
     object-fit: contain;
     background: #ffffff;
     transform: scale(1.1);
+}
+
+/* Raven Resonance logo for Gradient card — show whole logo, no crop */
+.project-card[data-project="13"] {
+    background: #ffffff;
+}
+
+.project-card[data-project="13"] .card-image {
+    object-fit: contain;
+    background: #ffffff;
 }
 
 
