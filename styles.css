@@ -1322,6 +1322,15 @@ body.project-page {
     display: block;
 }
 
+/* Full-bleed video that lines up with the container edges like full images */
+.project-image-section video.project-full-image.project-video-fullwidth {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+    transform: none;
+}
+
 
 
 /* Project Video Section */
