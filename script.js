@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
         '13': 'project_gradient.html',
         '14': 'project_miraGlasses.html',
         '15': 'project_honda.html',
-        '16': 'project_alaskaAirlines.html'
+        '16': 'project_alaskaAirlines.html',
+        '17': 'project_vexcite.html'
     };
     document.querySelectorAll('.project-card').forEach(function (card) {
         card.addEventListener('click', function () {

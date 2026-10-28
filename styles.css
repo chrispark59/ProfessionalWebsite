@@ -409,6 +409,17 @@ main {
     object-fit: cover;
 }
 
+/* Vexcite logo card — shrink logo to 50%, centered on black */
+.project-card[data-project="17"] {
+    background: #000000;
+}
+
+.project-card[data-project="17"] .card-image {
+    object-fit: contain;
+    background: #000000;
+    transform: scale(0.5);
+}
+
 
 
 .project-card:hover .card-image {
